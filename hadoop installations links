@@ -1,0 +1,50 @@
+HADOOP INSTALLATION
+==================
+https://downloads.apache.org/hadoop/common/hadoop-3.2.4/
+
+hadoop configuration
+====================
+# For core-site.xml
+<property>
+  <name>fs.defaultFS</name>
+  <value>hdfs://localhost:9000</value>
+</property>
+
+# For hdfs-site.xml or https-site.xml
+<property>
+  <name>dfs.replication</name>
+  <value>1</value>
+</property><property>
+  <name>dfs.namenode.name.dir</name>
+  <value>C:\hadoop\data\namenode</value>
+</property><property>
+  <name>dfs.datanode.data.dir</name>
+  <value>C:\hadoop\data\datanode</value>
+</property>
+
+# For mapred-site.xml
+<property>
+  <name>mapreduce.framework.name</name>
+  <value>yarn</value>
+</property>
+
+# For yarn-site.xml
+<property>
+  <name>yarn.nodemanager.aux-services</name>
+  <value>mapreduce_shuffle</value>
+</property><property>
+  <name>yarn.nodemanager.auxservices.mapreduce.shuffle.class</name>
+  <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+</property>
+
+hadoop bin folder
+================
+https://drive.google.com/file/d/1nCN_jK7EJF2DmPUUxgOggnvJ6k6tksYz/view
+
+msvcr-120 link
+==============
+https://www.dll-files.com/msvcr120.dll.html
+
+msvc-170 link
+=============
+https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170
